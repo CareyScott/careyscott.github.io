@@ -7,6 +7,8 @@
     <link rel="icon" href="images/sc_LOGO.jpg" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/captcha.css" />
+
     <noscript
       ><link rel="stylesheet" href="assets/css/noscript.css"
     /></noscript>
@@ -195,6 +197,8 @@
               <li><input type="reset" value="Reset" /></li>
             </ul>
           </form>
+          <span id="output"></span>
+
           <ul class="icons">
             <li>
               <a
@@ -516,8 +520,9 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
               </div>
               <ul class="actions">
                 <li>
-                  <input type="submit" value="Send Message" class="primary" />
+                  <input id="submitButton" type="submit" value="Send Message" class="primary" />
                 </li>
+                <li> <button id="refreshButton" type="submit">Refresh</button></li>
                 <li><input type="reset" value="Reset" /></li>
               </ul>
             </form>
@@ -543,5 +548,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+     <script src="assets/js/script.js"></script>
+
   </body>
 </html>
