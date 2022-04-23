@@ -7,6 +7,8 @@
     <link rel="icon" href="images/sc_LOGO.jpg" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <script src="https://unpkg.com/@botpoison/browser" async></script>
+
 <!--     <link rel="stylesheet" href="assets/css/captcha.css" />
  -->
     <noscript
@@ -198,7 +200,8 @@
             </ul>
           </form> -->
 
-          <form method="post" action="https://submit-form.com/VPTUG2Fl">
+          <form method="post" action="https://submit-form.com/VPTUG2Fl"   data-botpoison-public-key="pk_37f4129c-2616-4412-802b-5c2a658b9c3d"
+>
               <div class="fields">
                 <div class="field half">
                   <label for="demo-name">Name</label>
@@ -629,6 +632,19 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+  var formElement = document.getElementById("form");
+  var buttonElement = document.getElementById("button");
+  formElement.addEventListener("botpoison-challenge-start", function () {
+    buttonElement.setAttribute("disabled", "disabled");
+  });
+  formElement.addEventListener("botpoison-challenge-success", function () {
+    buttonElement.removeAttribute("disabled");
+  });
+  formElement.addEventListener("botpoison-challenge-error", function () {
+    buttonElement.removeAttribute("disabled");
+  });
+</script>
 <!--      <script src="assets/js/script.js"></script> -->
 
   </body>
